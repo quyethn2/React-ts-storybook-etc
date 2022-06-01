@@ -14,6 +14,7 @@ const config = {
   features: {
     postcss: false,
   },
+  // replace config webpack
   webpackFinal: async (config) => {
     config.resolve.alias = {
       "@src": path.resolve("src"),

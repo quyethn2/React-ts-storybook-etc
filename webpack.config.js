@@ -7,9 +7,11 @@ const path = require("path");
 
 // require("dotenv").config();
 
-const dotenv = require("dotenv").config({
-  path: path.resolve(__dirname, ".env"),
-});
+// const dotenv = require("dotenv").config({
+//   path: path.resolve(__dirname, "./.env"),
+// });
+
+const Dotenv = require('dotenv-webpack')
 
 const pathsPlugin = new TsconfigPathsPlugin({
   configFile: "./tsconfig.json",
@@ -26,7 +28,6 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 let config = {};
 
 module.exports = (env, argv) => {
-  console.log("env:", env);
   config = {
     entry: "./src/index.tsx",
     output: {
@@ -105,6 +106,8 @@ module.exports = (env, argv) => {
       // new HtmlWebpackPlugin({
       //   template: path.resolve(__dirname, "./public/index.html"),
       // }),
+
+      new Dotenv(),
 
       htmlWebpackPlugin,
       pathsPlugin,

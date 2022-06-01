@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 import { HomePage } from "./home-page/HomePage";
 
 function App() {
@@ -17,7 +17,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React - {process.env.NODE_ENV} -{" "}
+          {process.env.REACT_APP_NOT_SECRET_CODE}
           <HomePage />
         </a>
       </header>
