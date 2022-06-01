@@ -2,12 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es5",
-    "lib": [
-      "es2017",
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["es2017", "dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -23,12 +18,9 @@
     "jsx": "react-jsx",
     "paths": {
       "@assets/*": ["assets/*"],
-      "@src/*": ["src/*"],
-    },
+      "@src/*": ["src/*"]
+    }
   },
-  "include": [
-    "src"
-  ],
-  "exclude": ["node_modules"],
-  
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
