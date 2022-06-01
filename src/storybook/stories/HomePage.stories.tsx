@@ -1,5 +1,5 @@
-import * as React from "react";
 import { HomePage } from "../../home-page/HomePage";
+import * as React from "react";
 
 export default {
   title: "Example/Home page",

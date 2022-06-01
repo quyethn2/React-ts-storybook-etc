@@ -1,3 +1,5 @@
+const path = require("path");
+
 const config = {
   stories: [
     "../../src/**/*.stories.mdx",
@@ -13,7 +15,10 @@ const config = {
     postcss: false,
   },
   webpackFinal: async (config) => {
-    return { ...config, module: { ...config.module } };
+    config.resolve.alias = {
+      "@src": path.resolve("src"),
+    };
+    return config;
   },
 };
 module.exports = config;

@@ -127,15 +127,18 @@ module.exports = (env, argv) => {
     optimization: {
       minimize: false,
     },
-    resolve: {
-      extensions: [".tsx", ".ts", ".js"],
-    },
     devServer: {
       port: 4300,
       host: "localhost",
       historyApiFallback: true,
     },
     mode: "development",
+    resolve: {
+      alias: {
+        "@src": path.resolve("./src")
+      },
+      extensions: [".tsx", ".ts", ".js", "jsx"],
+    }
   };
   if (argv.mode === "development") {
     config.optimization.minimize = false;

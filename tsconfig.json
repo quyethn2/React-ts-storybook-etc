@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "target": "es5",
     "lib": [
+      "es2017",
       "dom",
       "dom.iterable",
       "esnext"
@@ -19,10 +20,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@src/*": ["src/*"],
+    },
   },
   "include": [
     "src"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  
 }
